@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+    
+}
+:root {
+    --width: 68%;
+
+    --dark-gray-color: #333;
+    --light-gray-color: #BDBDBD;
+    --white-color: #FDFDFD;
+    --black-color: #000;
+    --footer-bg-color: background-color: #4F4F4F;
+}
+
+
+
+body {
+    background-color: var(--white-color);
+    color: #333;
+    margin: 0;
+    font-family: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*************** Header *****************/
+header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    width: 100%;
+    background-color: var(--white-color);
+    box-shadow: rgba(189, 189, 189, 0.35) 0px 5px 15px;
+    z-index: 1000;
+}
+
+.nav-container{
+    width: var(--width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo{
+    width: 95px;
+    height: auto;
+}
+
+
+
+.nav--flex-row{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav--header--width{
+ width: 353px;
+
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 1rem;
+    font-weight: 400;
+    border-bottom: 1px solid transparent ;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.nav--flex-row .nav__link:hover{
+    border-color: #000;
+}
+
+.hamburger-menu-icon{
+    display: none;
+    margin-left: auto; 
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.hamburger-menu-icon:active{
+    transform: scale(1.1);
+}
+
+/**************** End of header***********/
+
+/*Main*/
+
+
+/* Hero */
+.hero {
+    font-size: 75px;
+    perspective: 7em;
+    perspective-origin: 50% -20%;
+    overflow: hidden;
+    width: 100%;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-gray-color);
+    padding-top: 40px;
+}
+.hero__heading {
+    text-align: center;
+    color: var(--white-color);
+    font-size: 4.63rem;
+}
+.hero__button {
+    height: 71px;
+    width: 183px;
+    border-radius: 100px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* Cards */
+.card-container {
+    width: var(--width);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+    row-gap: 1.5rem;
+    font-size: .86rem;
+    font-family: 'Open Sans';
+}
+.card-container__card {
+    width: 32%;
+    border-bottom: 2px solid rgba(0,0,0,.3);
+    padding-bottom: 4rem;
+}
+.card-container__card--big {
+    width: 66%;
+}
+.card-container__card__img {
+    width: 100%;
+}
+.card-container__card__heading {
+    font-size: 1.6rem;
+    margin: .5rem 0;
+}
+
+/* Quote */
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 90px 0;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+}
+.quote__circle {
+    background: url(../img/batman.jpg);
+    background-size: cover;
+    width: 140px;
+    height: 140px;
+    border-radius: 100px;
+}
+.quote__heading {
+    /* 1rem = 16px */
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 400;
+
+}
+
+/*Footer*/
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #4F4F4F;
+    min-height: 30vh;
+    padding: 6rem 8%;
+
+}
+
+
+
+.footer__heading {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.nav--flex-column{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.nav--flex-column .nav__link:hover{
+    border-color: var(--white-color);
+}
+.nav a{
+    color:white ;
+    text-decoration: none;
+}
+
+
+
+.about{
+    width: 17%;
+}
+
+.about p{
+    color: white;
+    font-size: 1rem;
+    line-height: 25px;
+    font-weight: 400;
+
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.social-media__icon {
+    fill: white;
+    height: 50px;
+    transition: 350ms;
+}
+.social-media__icon--yt:hover {
+    fill: red;
+    cursor: pointer;
+}
+.social-media__icon--fb:hover {
+    fill: #0866ff;
+    cursor: pointer;
+}
+.social-media__icon--twitter:hover {
+    fill: #1da1f2;
+    cursor: pointer;
+}
+
+/***************************************/
+
+/********** Media-queries **************/
+@media(max-width: 1200px){
+
+    .about{
+        width: 50%;
+    }
+    
+}
+@media(max-width: 950px){
+    /* Header/Nav */
+    header{
+        padding: 20px;
+    }
+    .hamburger-menu-icon {
+        display: block;
+    }
+
+    .nav-container{
+        width: 100%;
+    }
+    .nav__link{
+        display: none;
+    }
+
+    /* Main */
+    
+    main {
+        padding: 1rem;
+
+    }
+
+    /* Hero */
+
+    .hero__heading {
+        font-size: 3rem;
+    }
+    
+    /* End of Hero */
+    
+    /* Cards */
+    
+    .card-container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-top: 100px;
+        row-gap: 1.5rem;
+    }
+    .card-container__card {
+        width: 100%;
+    }
+
+    /* Change group image to a bigger one  */
+    .groupImage {
+        content: url("../img/group_big.jpg");
+    }
+
+    /* End of Cards */
+
+
+
+    /* Holy smokes */
+    .quote__heading {
+        font-size: 1.5rem;
+    }
+
+    
+    /* End of Holy smokes */
+    footer .nav, .footer__heading__nav {
+        display: none;
+    }
+    
+        
+     footer{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about{
+        width: 100%;
+    }
+}
+
+
+
+
