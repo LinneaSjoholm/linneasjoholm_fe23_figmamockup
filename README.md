@@ -1,1 +1,1 @@
-# linneasjoholm_fe23_figma_mockup
+# Grupp 6 (Amigos) Linnea, Lucas, Andreas, Jonathan
