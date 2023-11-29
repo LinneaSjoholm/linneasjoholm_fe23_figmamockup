@@ -1,1 +1,1 @@
-# Grupp 6 (Amigos) Linnea, Lucas, Andreas, Jonathan
+# amigos_FE23_flexboxmania
